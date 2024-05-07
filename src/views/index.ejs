@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head') -%>
+    <title>API Minecraft</title>
+</head>
+<body>
+    <%- include('partials/navegation') -%>
+    <main>
+        <section id = "sectionPrinc">
+            <div id="tarjetaInfoPrinc">
+                <h1 id="titlePrincipal">Minecraft API</h1>
+        
+                <p class="parrafoPrincipal">Api para la conusulta de entidades vivas dentro del juego. Se mantienen las caracteristicas
+                        de consulta de información a través de un servidor creado con Express y node.
+               </p>
+                <p class="parrafoPrincipal">Visita la documentación para más información sobre el uso de esta API...</p>
+        
+                <div id="botons">
+                    <a class = "btnDocPrincipal" href="/documentation"> Documentacion</a>
+                    <a class = "btnDocPrincipal"href = "/about"> Acerca de...</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="messageInt">
+            <h2>Consulta toda nuestra información</h2>
+            <p>Crea tus propias aplicaciones web con información rapida y sencilla.</p>
+        </section>
+
+    </main>
+
+    <%- include('partials/footer') -%>
+</body>
+</html>

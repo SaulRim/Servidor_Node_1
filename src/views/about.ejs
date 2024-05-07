@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head') -%>
+    <title>About</title>
+    <style>
+        .mainAbout{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #mainInfo{
+            background-color: white;
+            width: 90%;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        #mainInfo div ul{
+            margin-left: 40px;
+        }
+        #nombre{
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        #mainInfo div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+        } 
+        #foto{
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navegation') -%>
+    <main class="mainAbout">
+        <section id="mainInfo">
+            <div>
+                <h1>Creado por:</h1>
+                <p id = "nombre">Saul Ricaño Monroy</p>
+                <p>Ingeniero en Sistemas computacionales proveniente del Tecnologico de Pachuca.
+                    <br>Desarrollador web y modelador en 3D.
+                </p>
+                
+                <p>Creado en 2024</p>
+                <h2>Herramientas: </h2>
+                <ul>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>Javascript vanilla</li>
+                    <li>CSS vanilla</li>
+                </ul>
+            </div>
+            <div>
+                <img id = "foto" src="/img/cafe.png" alt="">
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') -%>
+</body>
+</html>

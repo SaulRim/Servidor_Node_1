@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head') -%>
+    <title>Documentation</title>
+</head>
+<body>
+    <%- include('partials/navegation') -%>
+    <main id = "sectionDoc"> 
+        <div id = "contectDoc">
+            <div id="menuLateral">
+                <a href="#get">GET</a>
+                <a href="#post">POST</a>
+                <a href="#put">PUT</a>
+                <a href="#delete">DELETE</a>
+            </div>
+            <div class="docTarjet">
+                <h1>Documentacion de la API</h1>
+                <div id="get" class = "docTarjetInd">
+                    <h2 class="docTitle">GET</h2>
+                    <h3>Lista de todos los mobs</h3>
+                    <p class="docRuta">/mobs</p>
+                    <p class="docDescription">Optiene una lista en Json con todos las entidades guardadas</p>
+
+                    <h3>Obtener un elemento individual</h3>
+                    <p class="docRuta">/mobs/id</p>
+                    <p class="docDescription">Recibe los datos de un elementos seleccionado por su ID. Mande el id del registro especificado en la direccón URL</p>
+
+                    <h3>Lista de las categorias registradas</h3>
+                    <p class="docRuta">/mobs/category</p>
+                    <p class="docDescription"> Muestra la lista de categorias existentes junto a su información</p>
+
+                    <h3>Filtrar mobs por categoria</h3>
+                    <p class="docRuta">/mobs/category/:categoria</p>
+                    <p class="docDescription">Obtenes una lista de elementos segun su categoria. Agregar la categoria por nombre. <br>
+                        - enemy <br>
+                        - animals<br>
+                        - paceaful
+                    </p>
+
+                    <h3>Obtiene la referencia a una imagen especifica</h3>
+                    <p class="docRuta">/img</p>
+                    <p class="docDescription">Para consultar las imagenes registradas.</p>
+                </div>
+                <div id="post" class = "docTarjetInd">
+                    <h2 class="docTitle">POST</h2>
+                    <h3>Agreagar un nuevo mob</h3>
+                    <p class="docRuta">/mobs</p>
+                    <p class="docDescription">Se necesita mandar un objeto Json con los datos especificados, tener en cuenta que la categoria coincida con las existentes.<br><br>
+                        {<br>
+                            name: "Creeper",<br>
+                            health: 6,<br>
+                            category: "enemy"<br>
+                        }
+                    </p>
+                </div>
+                <div id="put" class = "docTarjetInd">
+                    <h2 class="docTitle">UPDATE</h2>
+                    <h3>Actualizar un dato</h3>
+                    <p class="docRuta">/mobs/id</p>
+                    <p class="docDescription">Mandar los datos requeridos en Formato JSON<br><br>
+                        {<br>
+                            name: "Creeper",<br>
+                            health: 6,<br>
+                            category: "enemy"<br>
+                        }</p>
+                </div>
+                <div id="delete" class = "docTarjetInd">
+                    <h2 class="docTitle">DELETE</h2>
+                    <h3>Eliminar un registro</h3>
+                    <p class="docRuta">/mobs/:id</p>
+                    <p class="docDescription">Mande el id del registro especificado en la direccón URL</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') -%>
+</body>
+</html>
